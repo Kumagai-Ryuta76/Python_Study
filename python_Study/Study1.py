@@ -303,3 +303,29 @@ print(scores)
 # ディクショナリ.values()でキーをのぞいた値のみを取り出すことができる
 total = sum(scores.values())
 print(total)
+"""
+タプル
+変数 = (値1, 値2, 値3, ....)
+置き換えの可能性がない複数のデータを単にまとめて管理したい場合
+※要素の追加・変更・削除不可
+"""
+scores = (90, 80, 60)
+print(scores)
+print(scores[2])
+print(f'要素数は{len(scores)}')
+print(f'合計は{sum(scores)}')
+# タプル内で要素が1つのみの場合は、要素の後に,をつける
+b = ('a',)
+print(type(b))
+"""
+セット
+変数 = {値1, 値2, 値3,...}
+重複した値の格納不可
+添字の概念がないため順番がない
+append関数ではなくadd関数で追加を行う
+"""
+scores = {90, 70, 60, 50}
+scores.add(50)
+print(scores)
+print(f'要素数は{len(scores)}')
+print(f'合計は{sum(scores)}')
