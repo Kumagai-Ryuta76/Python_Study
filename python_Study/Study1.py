@@ -233,3 +233,73 @@ weight = int(weight)
 bmi = weight / height / height
 bmi = int(bmi * 10000)
 print(f'BMIは{bmi}です。')
+
+"""
+データ構造
+コンテナ
+→リスト・ディクショナリ・タプル・セトの4つが代表的
+
+リストは[]で右辺の要素を囲い、カンマ区切りで値を並べる
+変数 = [要素2, 要素2, 要素3, ・・・]
+複数のデータを単にまとめて管理する場合や、順序を持つ複数のデータを管理したい場合
+"""
+members = ['熊谷', '鈴木', '佐藤']
+# リスト全体の参照
+print(members)
+# リストの添字をしていして特定の要素を返す
+print(members[1])
+
+num = [10, 20, 30]
+# sum(リスト)でリストの合計値を返す
+total = sum(num)
+# len(リスト)でリストの要素数を返す
+ave = total / len(num)
+print(f'合計{num}、平均{ave}')
+# リスト.append(リストに追加したい値)
+members.append('田中')
+print(members)
+# リスト.remove(リストから削除したい値)
+members.remove('鈴木')
+print(members)
+# リスト[変更要素の添字] = 変更後の値
+members[1] = '中村'
+print(members)
+"""
+スライスによる範囲指定
+リスト変数[A:B]
+"""
+a = [10, 20, 30, 40, 50]
+# 添字1以上3未満の要素
+print(a[1:3])
+# 添字が2以上の全ての要素
+print(a[2:])
+# 添字が3未満の全ての要素
+print(a[:3])
+"""
+負の数による指定
+リスト変数[-1]
+負の要素になることで末尾から数えれる
+"""
+# 末尾の要素を参照
+print(a[-1])
+# 末尾から2番目の要素を参照
+print(a[-2])
+"""
+ディクショナリ
+変数 = {キー:値1, キー:値2, キー:値3}
+順序を持たない、複数のデータを見出しをつけて管理したい場合
+"""
+scores = {'network': 80, 'database': 90, 'security': 80}
+print(scores)
+# 変数名[キー]とすることでキーに付いた要素を呼び出せる
+print(scores['database'])
+# 要素の追加　ディクショナリ[新しいキー] = 新しい値
+scores['programing'] = 90
+# 要素の変更　ディクショナリ[変更したい要素のキー] = 変更後の値
+scores['network'] = 95
+# 要素の削除　del　ディクショナリ[削除したい要素のキー]
+del scores['security']
+print(scores)
+# ディクショナリ.values()でキーをのぞいた値のみを取り出すことができる
+total = sum(scores.values())
+print(total)
