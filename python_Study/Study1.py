@@ -329,3 +329,61 @@ scores.add(50)
 print(scores)
 print(f'要素数は{len(scores)}')
 print(f'合計は{sum(scores)}')
+"""
+コンテナの応用
+list関数：渡された物をリストに変換する
+tuple関数：渡された物をタプルに変換する
+set関数：渡された物をセットに変換する
+"""
+scores = {'network': 60, 'database': 80, 'security': 60}
+members = ['マツダ', 'アサギ', 'クドウ']
+# リストmembersをタプルに変換して表示
+print(tuple(members))
+# scoresのキーをリストに変換して表示
+print(list(scores))
+# scoresの値をセットに変換して表示
+print(set(scores.values()))
+"""
+コンテナのネスト
+"""
+# ディクショナリの中にディクショナリをネスト
+kumagai_scores = {'network': 90, 'database': 85, 'programing': 95}
+suzuki_scores = {'network': 95, 'database': 75, 'programing': 80}
+members_scores = {
+    '熊谷': kumagai_scores,
+    '鈴木': suzuki_scores
+}
+# ディクショナリの中にセットをネスト
+members_hobbies = {
+    '熊谷': {'映画', 'ゲーム', 'キャンプ'},
+    '鈴木': {'お酒', '筋トレ', 'クラブ', 'ゲーム'}
+}
+print(members_hobbies)
+print(members_hobbies['熊谷'])
+print(members_hobbies['鈴木'])
+"""
+2次元リスト：リストの中にリストを入れたもの
+"""
+a = [1, 2, 3]
+b = [2, 3, 4]
+c = [a, b]
+# リストc斬隊を参照
+print(c)
+# リストのcの0番目（リストa）だけを参照
+print(c[0])
+# リストcの1番目（リストb）の2番目だけ参照
+print(c[1][2])
+"""
+集合演算
+セットのみで使える機能
+セット1 | セット2　和集合
+セット1 & セット2　積集合
+セット1 - セット2　差集合
+セット1 ^ セット2　対象差
+"""
+A = {1, 2, 3, 4}
+B = {2, 3, 4, 5}
+print(A | B)
+print(A & B)
+print(A - B)
+print(A ^ B)
