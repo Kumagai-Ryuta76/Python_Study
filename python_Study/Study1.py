@@ -417,3 +417,16 @@ if 'カレー' in food:
     print('素敵です。カレーは最高です。')
 else:
     print(f'私も{food}が好きです。')
+
+score = {'network': 80, 'database': 100, 'security': 20}
+key = input('追加する科目名を入力してください >>')
+if 100 in score:
+    print('すでに登録済みです')
+else:
+    data = int(input('特典を入力してください >>'))
+    score[key] = data
+print(score)
+"""
+ディクショナリのキーの存在を調べる
+キー in ディクショナリ
+"""
