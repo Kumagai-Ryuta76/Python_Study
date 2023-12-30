@@ -423,12 +423,13 @@ key = input('追加する科目名を入力してください >>')
 if 100 in score:
     print('すでに登録済みです')
 else:
-    data = int(input('特典を入力してください >>'))
+    data = int(input('得点を入力してください >>'))
     score[key] = data
 print(score)
 """
 ディクショナリのキーの存在を調べる
 キー in ディクショナリ
+<<<<<<< HEAD
 """
 score = int(input('試験の点数を入力'))
 print(score >= 60)
@@ -466,3 +467,27 @@ if 'カレー' in food:
     print('素敵です。とにかくカレーは最高ですよね！！')
 else:
     print(f'私も{food}が好きですよ')
+"""
+if-elif構文
+if 条件式1:
+    条件式1が処理成立した時の処理
+elif　条件式2:
+    条件式1が成立せず、条件式2が成立した時の処理
+.
+.
+.
+elif 条件式n:
+    上記の条件式全てが成立せず、条件式nが成立した時の処理
+else:
+    全ての条件式が成立しなかった時の処理
+"""
+score = int(input('試験の点数を入力してください>>'))
+if score < 0 or score > 100:
+    print('異常な得点です')
+    print('入力し直してください')
+elif score >= 60:
+    print('合格')
+    print('よくがんばりました')
+else:
+    print('残念がら不合格です')
+    print('追試を受けてください')
