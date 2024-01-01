@@ -491,3 +491,12 @@ elif score >= 60:
 else:
     print('残念がら不合格です')
     print('追試を受けてください')
+"""
+while 条件式:
+    条件が成立した時の処理(whileブロック)
+"""
+count = 0
+while count < 3:
+    count += 1
+    print(f'羊が{count}匹')
+
